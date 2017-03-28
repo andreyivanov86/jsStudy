@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+  <title>Quote Generator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel = "stylesheet" type = "text/css" href = "quote.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https:////maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row text-center">
+		<h2>Quote Generator</h2>
+	</div>
+</div>
+
+<div class="row text-center">
+	<div class="col-sm-12 well quote">
+		Quote goes here
+	</div>
+</div>
+
+<div class="row text-center">
+	<div class="col-sm-12">
+		<button classs = "btn btn-primary" id = "getQuoteButton">
+			Generate Quote
+		</button>
+	</div>
+</div>
+</body>
+
+<script type="text/javascript">
+	$(document).ready( function (){
+  //Click on Button trigger event
+  $("#getQuote").on("click", function(){
+    //Send requets to the host for JSON 
+    $.getJSON("https://learnwebcode.github.io/json-example/animals-1.json", function(jsonData) {
+      
+      var html = "";//New empty html line of code
+      
+      //Loop through each json element
+      json.forEach( function(val) { 
+//         var key = Object.keys(val);//Select current element key value
+       
+//         key.forEach( function (key) {
+//           html += key + " " + val[key];
+//         });
+       console.log(val);
+      });
+    //Output to the message div container
+    $(".message").html(html);
+    })
+   
+  });
+});
+	
+  
+</script>
