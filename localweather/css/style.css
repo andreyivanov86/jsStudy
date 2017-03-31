@@ -1,20 +1,51 @@
 body {
+	display: flex;
+	justify-content: center;
 	background-color: gray;
 }
-
+.container {
+	background-color: #E6A8D9;
+	display: flex;
+	flex-flow: column;
+	padding: 100px 30px 30px 30px;
+}
 .header {
 	
-	max-width: 500px;
-	margin: 100px auto 5px auto;
 	background-color: #F0FFFF;
 	font-family: "Century Gothic";
 	text-align: center;
 	font-size: 25px;
 }
-.weather {
-	max-width: 500px;
-	margin: 5px auto 5px auto;
+.icon {
+	
+	margin: 10px auto 10px auto;
 	background-color: #F0FFFF;
+	font-family: "Century Gothic";
+	text-align: center;
+	font-size: 25px;
+}
+
+.location-container {
+	display: flex;	
+}
+
+.location {
+	background-color: #F0FFFF;
+	margin: auto 2px auto 2px;
+	font-family: "Century Gothic";
+	text-align: center;
+	font-size: 25px;
+}
+.weather {
+	background-color: #F0FFFF;
+	margin: auto 2px auto 2px;
+	font-family: "Century Gothic";
+	text-align: center;
+	font-size: 25px;
+}
+.wind {
+	background-color: #F0FFFF;
+	margin: auto 2px auto 2px;
 	font-family: "Century Gothic";
 	text-align: center;
 	font-size: 25px;
