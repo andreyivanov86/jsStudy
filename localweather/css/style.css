@@ -1,0 +1,21 @@
+body {
+	background-color: gray;
+}
+
+.header {
+	
+	max-width: 500px;
+	margin: 100px auto 5px auto;
+	background-color: #F0FFFF;
+	font-family: "Century Gothic";
+	text-align: center;
+	font-size: 25px;
+}
+.weather {
+	max-width: 500px;
+	margin: 5px auto 5px auto;
+	background-color: #F0FFFF;
+	font-family: "Century Gothic";
+	text-align: center;
+	font-size: 25px;
+}
