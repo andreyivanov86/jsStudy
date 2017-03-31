@@ -33,6 +33,7 @@ body {
   font-size: 25px;
   font-family: 'Book Antiqua';
  }
+ 
  .author-container {
   height: 30px;
   display: flex;
@@ -42,9 +43,9 @@ body {
   font-family: 'Palatino Linotype';
   font-size: 25px;
   }
+
 .button-container {
   display: flex;
-  
   margin: 5px auto 5px auto;
   background-color: #FFFAF0;
   justify-content: space-between;
