@@ -19,8 +19,9 @@ $(document).ready(function() {
 		//$.getJSON("https://andreyivanov86.github.io/jsStudy/randomquote/quotes.json", function(data){
 
 			var tweetUrl = "";
-			tweetUrl = 'https://twitter.com/intent/tweet?text=' + $("#quote").html() + '%0A' + "- " + $("#author").html();
-			console.log(tweetUrl);
+			quote = $("#quote").html();
+			author = $("#author").html();
+			tweetUrl = 'https://twitter.com/intent/tweet?text=' + quote + '%0A' + "- " + author;
 			window.open(tweetUrl);
 		//})
 	})
