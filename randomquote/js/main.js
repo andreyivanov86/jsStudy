@@ -8,7 +8,6 @@ $(document).ready(function() {
 			
 			$("#quote").html(quotes);
 			$("#author").html(authors);
-			console.log(allQuotes);
 		});
 	});
 
