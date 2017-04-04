@@ -6,40 +6,35 @@ window.onload = function () {
         })
     }
 
-    function getGeolcationFailed () {
-    	alert("Geocoder failed");
-    };
+    // function getGeolcationFailed () {
+    // 	alert("Geocoder failed");
+    // };
 
     function loadWeather(location, woeid) {
     	$.simpleWeather({
     		location: location,
     		woeid: woeid,
-    		unit: "f",
+    		unit: "c",
+    		
     		success: function(weather) {
 
+    			//htmlWeathericon = ;
     			htmlLocation = weather.city + ", " + weather.region;
-    			htmlWeather = '<i class="wi wi-yahoo' + weather.code + '"></i>' + weather.temp + '&deg;' + 
-    			weather.units.temp;
+    			htmlWeather = '<h2><i class="icon-'+weather.code+'"></i>' + weather.temp + '&deg;' + 
+    			weather.units.temp + '</h2>';
     			htmlWind = weather.currently;
-    			
+    			htmlWindspeed = "Wind " + weather.wind.chill + "&deg " + " " + weather.wind.direction + " " + weather.wind.speed + " " +
+    			weather.units.speed;
 
+    			
     			$("#location").html(htmlLocation);
+    			//$("#weather-icon").html(htmlWeathericon);
     			$("#weather").html(htmlWeather);
     			$("#wind").html(htmlWind);
+    			$("#wind-speed").html(htmlWindspeed)
     		}
     	})
     }
 };
 
-    // function getGeolocationSuccess(position) {
-    // 	var latitude = position.coords.latitude;
-    //     var longitude = position.coords.longitude;
-
-    //     var geocoding = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + 
-    //     latitude + '%2C' + longitude + '&language=en';
-
-    //     $.getJSON(geocoding).done(function(location){
-    //     	$("#location").html(location.results[0].address_components[2].long_name + ", " + 
-    //     		location.results[0].address_components[4].long_name)
-    //     })
-    //  };
+    
