@@ -7,7 +7,7 @@ body {
 	background-color: #E6A8D9;
 	display: flex;
 	flex-flow: column;
-	padding: 100px 30px 30px 30px;
+	padding: 50px 30px 30px 30px;
 }
 .header {
 	margin: 10px auto 10px auto;
@@ -25,9 +25,15 @@ body {
 	font-size: 25px;
 }
 
-.location-container {
+.wind-container {
+	margin: 10px auto 10px auto;
+}
+
+@media (min-width: 960px) {
+	.wind-container {
 	display: flex;
 	justify-content: space-between;	
+	}
 }
 
 .location {
@@ -44,9 +50,16 @@ body {
 	text-align: center;
 	font-size: 25px;
 }
-.wind {
+.conditions {
 	background-color: #F0FFFF;
 	margin: auto 2px auto 2px;
+	font-family: "Century Gothic";
+	text-align: center;
+	font-size: 25px;
+}
+.wind-chill {
+	background-color: #F0FFFF;
+	margin: 10px 2px 10px 2px;
 	font-family: "Century Gothic";
 	text-align: center;
 	font-size: 25px;
