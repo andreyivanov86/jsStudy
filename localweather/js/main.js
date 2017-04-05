@@ -18,17 +18,16 @@ window.onload = function () {
     		
     		success: function(weather) {
 
-    			//htmlWeathericon = ;
+    			
     			htmlLocation = weather.city + ", " + weather.region;
-    			htmlWeather = '<h2><i class="icon-'+weather.code+'"></i>' + " " + weather.temp + '&deg;' + 
-    			weather.units.temp + '</h2>';
+    			htmlWeather = '<h2 class = "icon-5"></h2>' + weather.code + " " + weather.temp + '&deg' + 
+    			weather.units.temp;
     			htmlWind = weather.currently;
     			htmlWindchill = "Wind " + weather.wind.chill + "&deg ";
                 htmlWindspeed =  weather.wind.direction + " " + Math.round(weather.wind.speed) + " " + weather.units.speed;
 
     			
     			$("#location").html(htmlLocation);
-    			//$("#weather-icon").html(htmlWeathericon);
     			$("#weather").html(htmlWeather);
     			$("#conditions").html(htmlWind);
                 $("#wind-chill").html(htmlWindchill);

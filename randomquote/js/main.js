@@ -8,11 +8,13 @@ $(document).ready(function() {
 			
 			$("#quote").html(quotes);
 			$("#author").html(authors);
+			$("#tweet").css("visibility", "visible");
 		});
 	});
 
 	
 		$("#tweet").on("click", function(){
+
 				var tweetUrl = "";
 				quote = $("#quote").html();
 				author = $("#author").html();

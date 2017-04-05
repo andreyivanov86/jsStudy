@@ -50,7 +50,9 @@ body {
   background-color: #FFFAF0;
   justify-content: space-between;
 }
-
+#tweet {
+  visibility: hidden;
+}
 button {
  background-color: #FFFAF0;
  border: none;

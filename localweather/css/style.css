@@ -72,17 +72,7 @@ body {
 	font-size: 25px;
 }
 
-@font-face {
-    font-family: 'weather';
-    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot');
-    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'),
-         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff') format('woff'),
-         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf') format('truetype'),
-         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-.icon-0:before { content: ":"; }
+/*.icon-0:before { content: ":"; }
 .icon-1:before { content: "p"; }
 .icon-2:before { content: "S"; }
 .icon-3:before { content: "Q"; }
@@ -129,4 +119,4 @@ body {
 .icon-44:before { content: "a"; }
 .icon-45:before { content: "S"; }
 .icon-46:before { content: "U"; }
-.icon-47:before { content: "S"; }
+.icon-47:before { content: "S"; }*/
