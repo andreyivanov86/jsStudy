@@ -1,3 +1,29 @@
+<div id="weather"></div>
+<script src = "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+$(document).ready(function() {
+  $.simpleWeather({
+    location: 'Austin, TX',
+    woeid: '',
+    unit: 'f',
+    success: function(weather) {
+      html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+      html += '<li class="currently">'+weather.currently+'</li>';
+      html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
+  
+      $("#weather").html(html);
+    },
+    error: function(error) {
+      $("#weather").html('<p>'+error+'</p>');
+    }
+  });
+});
+
+</script>
+<style>
 @font-face {
     font-family: 'weather';
     src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot');
@@ -9,84 +35,35 @@
     font-style: normal;
 }
 
+html {
+  width: 100%;
+  height: 100%;
+  background: #1192d3 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/austin-2.jpg) no-repeat bottom right;
+  background-size: cover;
+}
+
 body {
-	display: flex;
-	justify-content: center;
-	background-color: gray;
-}
-.container {
-	background-color: #E6A8D9;
-	display: flex;
-	flex-flow: column;
-	padding: 30px 30px 30px 30px;
-}
-.header {
-	margin: 10px auto 10px auto;
-	background-color: #F0FFFF;
-	font-family: "Century Gothic";
-	text-align: center;
-	font-size: 25px;
-}
-.icon {
-	
-	margin: 10px auto 10px auto;
-	background-color: #F0FFFF;
-	font-family: "Century Gothic";
-	text-align: center;
-	font-size: 25px;
+  padding: 45px 0;
+  font: 13px 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-.wind-container {
-	margin: 10px auto 10px auto;
+#weather {
+  width: 500px;
+  margin: 0px auto;
+  text-align: center;
+  text-transform: uppercase;
 }
-
-@media (min-width: 960px) {
-	.wind-container {
-	display: flex;
-	justify-content: space-between;	
-	}
-}
-
-.location {
-	background-color: #F0FFFF;
-	margin: 10px auto 10px auto ;
-	font-family: "Century Gothic";
-	text-align: center;
-	font-size: 25px;
-}
-.weather {
-	background-color: #F0FFFF;
-	margin: auto 10px auto 10px;
-	font-family: "Century Gothic";
-	text-align: center;
-	font-size: 25px;
-}
-.conditions {
-	background-color: #F0FFFF;
-	margin: auto 2px auto 2px;
-	font-family: "Century Gothic";
-	text-align: center;
-	font-size: 25px;
-}
-.wind-chill {
-	background-color: #F0FFFF;
-	margin: 10px 2px 10px 2px;
-	font-family: "Century Gothic";
-	text-align: center;
-	font-size: 25px;
-}
-.wind-speed {
-	background-color: #F0FFFF;
-	margin: 10px 2px 10px 2px;
-	font-family: "Century Gothic";
-	text-align: center;
-	font-size: 25px;
-}
-
 
 i {
-	font-family: weather;
+  color: #fff;
+  font-family: weather;
+  font-size: 150px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.0;
+  text-transform: none;
 }
+
 .icon-0:before { content: ":"; }
 .icon-1:before { content: "p"; }
 .icon-2:before { content: "S"; }
@@ -135,3 +112,30 @@ i {
 .icon-45:before { content: "S"; }
 .icon-46:before { content: "U"; }
 .icon-47:before { content: "S"; }
+
+#weather h2 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 100px;
+  font-weight: 300;
+  text-align: center;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+#weather ul {
+  margin: 0;
+  padding: 0;
+}
+
+#weather li {
+  background: #fff;
+  background: rgba(255,255,255,0.90);
+  padding: 20px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+#weather .currently {
+  margin: 0 20px;
+}
+</style>
