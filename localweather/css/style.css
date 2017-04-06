@@ -19,6 +19,7 @@ body {
 	display: flex;
 	flex-flow: column;
 	padding: 30px 30px 30px 30px;
+
 }
 .header {
 	margin: 10px auto 10px auto;
@@ -82,7 +83,18 @@ body {
 	text-align: center;
 	font-size: 25px;
 }
-
+.units-container {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	font-family: "Century Gothic";
+	font-size: 20px;
+}
+.units-button {
+	margin: auto 5px;
+	background-color: transparent;
+	border: 0px;
+}
 
 i {
 	font-family: weather;
