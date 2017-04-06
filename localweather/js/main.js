@@ -1,14 +1,17 @@
 $(document).ready(function () { 
-    if (navigator.geolocation){         
-                //navigator.geolocation.getCurrentPosition(getGeolocationSuccess, getGeolcationFailed);
+    // $.getJSON("http://ip-api.com/json", function(data){
+    //     var lat = data.lat;
+    //     var lon = data.lon;
+    //     navigator.geolocation.getCurrentPosition (function(position){
+    //         console.log(lat);
+    //     })
+    // })
+
+    if (navigator.geolocation){           
         navigator.geolocation.getCurrentPosition(function(position){
              loadWeather(position.coords.latitude + ',' + position.coords.longitude);
         })
     }
-
-    // function getGeolcationFailed () {
-    //  alert("Geocoder failed");
-    // };
 
     function loadWeather(location, woeid) {
         $.simpleWeather({

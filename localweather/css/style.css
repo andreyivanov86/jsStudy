@@ -56,7 +56,7 @@ body {
 }
 .weather {
 	background-color: #F0FFFF;
-	margin: auto 10px auto 10px;
+	margin: auto;
 	font-family: "Century Gothic";
 	text-align: center;
 	font-size: 25px;
