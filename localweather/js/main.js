@@ -1,13 +1,16 @@
 $(document).ready(function () { 
     // $.getJSON("http://ip-api.com/json", function(data){
-    //     var lat = data.lat;
-    //     var lon = data.lon;
-    //     navigator.geolocation.getCurrentPosition (function(position){
-    //         console.log(lat);
-    //     })
+               
+    //     if ("geolocation" in navigator){
+    //     navigator.geolocation.getCurrentPosition (function(data){
+    //         var lat = data.coords.latitude;
+    //         var lon = data.coords.longitude;
+    //         loadWeather(lat + "," + lon);
+    //         })
+    //     }
     // })
 
-    if (navigator.geolocation){           
+    if ("geolocation" in navigator){           
         navigator.geolocation.getCurrentPosition(function(position){
              loadWeather(position.coords.latitude + ',' + position.coords.longitude);
         })
@@ -17,18 +20,16 @@ $(document).ready(function () {
         $.simpleWeather({
             location: location,
             woeid: woeid,
-            unit: "f",
+            //units: "c",
             
             success: function(weather) {
-
                 
                 htmlLocation = weather.city + ", " + weather.region;
-                htmlWeather = '<i class = "icon-' + weather.code + '"></i>' + weather.temp + '&deg' + 
+                htmlWeather = '<i class = "icon-' + weather.code + '"></i>' + " " + weather.temp + ' &deg' + 
                 weather.units.temp;
                 htmlWind = weather.currently;
                 htmlWindchill = "Wind " + weather.wind.chill + "&deg ";
                 htmlWindspeed =  weather.wind.direction + " " + Math.round(weather.wind.speed) + " " + weather.units.speed;
-
                 
                 $("#location").html(htmlLocation);
                 $("#weather").html(htmlWeather);
@@ -37,6 +38,9 @@ $(document).ready(function () {
                 $("#wind-speed").html(htmlWindspeed)
             }
         })
+    }
+    function units() {
+        if (C.onclick) {return "c";} else {return "f"};
     }
 })
 

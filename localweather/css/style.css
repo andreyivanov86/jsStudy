@@ -12,7 +12,8 @@
 body {
 	display: flex;
 	justify-content: center;
-	background-color: gray;
+	background-image: url("image/sunny.jpg");
+
 }
 .container {
 	background-color: #E6A8D9;
