@@ -60,6 +60,16 @@ $(document).ready(function () {
                 $("#conditions").html(htmlWind);
                 $("#wind-chill").html(htmlWindchill);
                 $("#wind-speed").html(htmlWindspeed)
+
+                if (weather.temp <= 35){ 
+                    $("#body").css("background-color", "#1E90FF"); 
+                  } else if (weather.temp > 35 && weather.temp <= 50) {
+                    $("#body").css("background-color", "#1EFF80");
+                  } else if (weather.temp > 50 && weather.temp <= 80) {
+                    $("#body").css("background-color", "#FFC50A");
+                  } else if (weather.temp > 80) {
+                    $("#body").css("background-color", "#FF6700");
+                  }  
             }
         })
     }
