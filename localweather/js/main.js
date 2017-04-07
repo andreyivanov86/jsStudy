@@ -16,14 +16,38 @@ $(document).ready(function () {
         })
     }
 
+    $("#C").click(function(){
+        changeUnits("C");
+    })
+
+   $("#F").click(function(){
+        changeUnits("F");
+    })
+
+    function changeUnits(unit) {
+        var htmlString = "";
+        switch (unit) {
+            case "F":
+                htmlString = '<i class = "icon-' + globalWeather.code + '"></i>' + " " + globalWeather.temp + ' &deg' + globalWeather.units.temp.toUpperCase();
+                break;
+            case "C":
+                htmlString = '<i class = "icon-' + globalWeather.code + '"></i>' + " " + globalWeather.alt.temp + ' &deg' + globalWeather.alt.unit.toUpperCase();
+                break;
+        }
+        $("#weather").html(htmlString);
+    }
+
+    var globalWeather;
+
     function loadWeather(location, woeid) {
         $.simpleWeather({
             location: location,
             woeid: woeid,
-            //units: "c",
+            units: "c",
             
             success: function(weather) {
-                
+                globalWeather = weather;
+                console.log(weather);
                 htmlLocation = weather.city + ", " + weather.region;
                 htmlWeather = '<i class = "icon-' + weather.code + '"></i>' + " " + weather.temp + ' &deg' + 
                 weather.units.temp;
