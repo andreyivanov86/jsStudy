@@ -28,17 +28,59 @@ $(document).ready(function () {
         var htmlString = "";
         switch (unit) {
             case "F":
-                htmlString = '<i class = "icon-' + globalWeather.code + '"></i>' + " " + globalWeather.temp + ' &deg' + globalWeather.units.temp.toUpperCase();
+                htmlString = '<i class = "icon-' + globalWeather.code + '"></i>' + " " + globalWeather.temp + ' &deg'
+                 + globalWeather.units.temp.toUpperCase();
+
+                 htmlForecast1 = globalWeather.forecast[1].day + "<br>" + '<i class = "forecast-icon icon-' + globalWeather.code + '"></i>' + "<br>"
+                + "High " + globalWeather.forecast[1].high + "&deg "+ globalWeather.units.temp + "<br>" + "Low " + globalWeather.forecast[1].low + 
+                "&deg "+ globalWeather.units.temp.toUpperCase() + "<br>" + globalWeather.forecast[1].text;
+
+                htmlForecast2 = globalWeather.forecast[2].day + "<br>" + '<i class = "forecast-icon icon-' + globalWeather.code + '"></i>' + "<br>"
+                + "High " + globalWeather.forecast[2].high + "&deg "+ globalWeather.units.temp + "<br>" + "Low " + globalWeather.forecast[2].low + 
+                "&deg "+ globalWeather.units.temp.toUpperCase() + "<br>" + globalWeather.forecast[2].text;
+                
+                htmlForecast3 = globalWeather.forecast[3].day + "<br>" + '<i class = "forecast-icon icon-' + globalWeather.code + '"></i>' + "<br>"
+                + "High " + globalWeather.forecast[3].high + "&deg "+ globalWeather.units.temp + "<br>" + "Low " + globalWeather.forecast[3].low + 
+                "&deg "+ globalWeather.units.temp.toUpperCase() + "<br>" + globalWeather.forecast[3].text;
+                
+                htmlForecast4 = globalWeather.forecast[4].day + "<br>" + '<i class = "forecast-icon icon-' + globalWeather.code + '"></i>' + "<br>"
+                + "High " + globalWeather.forecast[4].high + "&deg "+ globalWeather.units.temp + "<br>" + "Low " + globalWeather.forecast[4].low + 
+                "&deg "+ globalWeather.units.temp.toUpperCase() + "<br>" + globalWeather.forecast[4].text;
+                
                 break;
+
             case "C":
-                htmlString = '<i class = "icon-' + globalWeather.code + '"></i>' + " " + globalWeather.alt.temp + ' &deg' + globalWeather.alt.unit.toUpperCase();
+
+                htmlString = '<i class = "icon-' + globalWeather.code + '"></i>' + " " + globalWeather.alt.temp + ' &deg'
+                 + globalWeather.alt.unit.toUpperCase();
+
+                 htmlForecast1 = globalWeather.forecast[1].day + "<br>" + '<i class = "forecast-icon icon-' + globalWeather.code + '"></i>' + "<br>"
+                + "High " + globalWeather.forecast[1].alt.high + "&deg "+ globalWeather.alt.unit.toUpperCase() + "<br>" + "Low " + globalWeather.forecast[1].alt.low + 
+                "&deg "+ globalWeather.alt.unit.toUpperCase() + "<br>" + globalWeather.forecast[1].text;
+                
+                htmlForecast2 = globalWeather.forecast[2].day + "<br>" + '<i class = "forecast-icon icon-' + globalWeather.code + '"></i>' + "<br>"
+                + "High " + globalWeather.forecast[2].alt.high + "&deg "+ globalWeather.alt.unit.toUpperCase() + "<br>" + "Low " + globalWeather.forecast[2].alt.low + 
+                "&deg "+ globalWeather.alt.unit.toUpperCase() + "<br>" + globalWeather.forecast[2].text;
+                
+                htmlForecast3 = globalWeather.forecast[3].day + "<br>" + '<i class = "forecast-icon icon-' + globalWeather.code + '"></i>' + "<br>"
+                + "High " + globalWeather.forecast[3].alt.high + "&deg "+ globalWeather.alt.unit.toUpperCase() + "<br>" + "Low " + globalWeather.forecast[3].alt.low + 
+                "&deg "+ globalWeather.alt.unit.toUpperCase() + "<br>" + globalWeather.forecast[3].text;
+                
+                htmlForecast4 = globalWeather.forecast[4].day + "<br>" + '<i class = "forecast-icon icon-' + globalWeather.code + '"></i>' + "<br>"
+                + "High " + globalWeather.forecast[4].alt.high + "&deg "+ globalWeather.alt.unit.toUpperCase() + "<br>" + "Low " + globalWeather.forecast[4].alt.low + 
+                "&deg "+ globalWeather.alt.unit.toUpperCase() + "<br>" + globalWeather.forecast[4].text;
+                
                 break;
         }
+
         $("#weather").html(htmlString);
+        $("#day1").html(htmlForecast1);
+        $("#day2").html(htmlForecast2);
+        $("#day3").html(htmlForecast3);
+        $("#day4").html(htmlForecast4);
     }
 
-    var globalWeather;
-
+    var globalWeather = weather;
     function loadWeather(location, woeid) {
         $.simpleWeather({
             location: location,
@@ -82,13 +124,13 @@ $(document).ready(function () {
                 $("#day4").html(htmlForecast4);
 
                 if (weather.temp <= 35){ 
-                    $("#body").css("background-color", "#1E90FF"); 
+                    $("#body").css("background-color", "#1E50FF"); 
                   } else if (weather.temp > 35 && weather.temp <= 50) {
-                    $("#body").css("background-color", "#1EFF80");
+                    $("#body").css("background-color", "#2790E2");
                   } else if (weather.temp > 50 && weather.temp <= 80) {
-                    $("#body").css("background-color", "#FFC50A");
+                    $("#body").css("background-color", "#04C408");
                   } else if (weather.temp > 80) {
-                    $("#body").css("background-color", "#FF6700");
+                    $("#body").css("background-color", "#FFA812");
                   }  
             }
         })
