@@ -54,12 +54,18 @@ $(document).ready(function () {
                 htmlWind = weather.currently;
                 htmlWindchill = "Wind " + weather.wind.chill + "&deg ";
                 htmlWindspeed =  weather.wind.direction + " " + Math.round(weather.wind.speed) + " " + weather.units.speed;
+                //htmlForcast = weather.forcast[1];
                 
+                console.log(weather);
+                
+
                 $("#location").html(htmlLocation);
                 $("#weather").html(htmlWeather);
                 $("#conditions").html(htmlWind);
                 $("#wind-chill").html(htmlWindchill);
                 $("#wind-speed").html(htmlWindspeed)
+
+                //$("#day1").html(htmlForcast);
 
                 if (weather.temp <= 35){ 
                     $("#body").css("background-color", "#1E90FF"); 
@@ -73,9 +79,7 @@ $(document).ready(function () {
             }
         })
     }
-    function units() {
-        if (C.onclick) {return "c";} else {return "f"};
-    }
+  
 })
 
     

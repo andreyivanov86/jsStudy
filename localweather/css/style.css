@@ -15,9 +15,9 @@ body {
   margin: 50px auto;
 }
 .container {
- 	display: flex;
-	flex-flow: column;
-	padding: 30px 30px 30px 30px;
+  display: flex;
+  flex-flow: column;
+  padding: 30px 30px 30px 30px;
   border: 1px solid white;
   color: white;
   font-family: "Century Gothic";
@@ -82,6 +82,8 @@ i {
 	flex-flow: row;
 	justify-content: center;	
 	font-size: 20px;
+	margin: 10px auto 10px auto;
+	
 }
 .units-button {
 	margin: auto 5px;
@@ -89,6 +91,23 @@ i {
 	border: 0px;
   cursor: pointer;
   color: white;
+}
+.forcast-container {
+	display: flex;
+	flex-flow: row;
+	margin: 10px auto 10px auto;
+	font-size: 25px;
+	justify-content: space-around;
+}
+@media (min-width: 960px) {
+	.forcast-container {
+	display: flex;
+	justify-content: space-between;	
+	}
+}
+.forcast {
+	border: 1px solid white;
+	margin: auto 5px auto 5px;
 }
 
 .icon-0:before { content: ":"; }
