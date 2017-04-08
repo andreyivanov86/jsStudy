@@ -56,6 +56,9 @@ i {
   line-height: normal;
   text-transform: none;
 }
+.forecast-icon {
+	font-size: 35px;
+}
 
 .weather {
 	margin: auto 10px auto 10px;
@@ -92,20 +95,21 @@ i {
   cursor: pointer;
   color: white;
 }
-.forcast-container {
+.forecast-container {
 	display: flex;
 	flex-flow: row;
 	margin: 10px auto 10px auto;
-	font-size: 25px;
-	justify-content: space-around;
+	font-size: 20px;
+	justify-content: space-between;
 }
 @media (min-width: 960px) {
-	.forcast-container {
+	.forecast-container {
 	display: flex;
+	flex: column;
 	justify-content: space-between;	
 	}
 }
-.forcast {
+.forecast {
 	border: 1px solid white;
 	margin: auto 5px auto 5px;
 }
