@@ -21,7 +21,6 @@ body {
   border: 1px solid white;
   color: white;
   font-family: "Century Gothic";
-  
   text-align:center;
   
 }
@@ -45,6 +44,7 @@ body {
 .forecast-container {
 	margin: 10px auto 10px auto;
 	justify-content: space-between;
+  align-items:
 }
 @media (min-width: 960px) {
 	.forecast-container {	
@@ -56,10 +56,13 @@ body {
 	border: 1px solid white;
 	margin: auto 5px 5px 5px;
 	padding: 3px;
-	max-width: 130px;
+  width: 150px;
+  height: 170px;
+  
 }
 .forecast-font {
 	font-size: 20px;
+  margin: auto;
 }
 .location {
 	margin: 10px auto 10px auto ;

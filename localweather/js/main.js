@@ -1,14 +1,6 @@
 $(document).ready(function () { 
-    // $.getJSON("http://ip-api.com/json", function(data){
-               
-    //     if ("geolocation" in navigator){
-    //     navigator.geolocation.getCurrentPosition (function(data){
-    //         var lat = data.coords.latitude;
-    //         var lon = data.coords.longitude;
-    //         loadWeather(lat + "," + lon);
-    //         })
-    //     }
-    // })
+    
+    
 
     if ("geolocation" in navigator){           
         navigator.geolocation.getCurrentPosition(function(position){
@@ -88,6 +80,7 @@ $(document).ready(function () {
             units: "c",
             
             success: function(weather) {
+                
                 globalWeather = weather;
                 console.log(weather);
                 //Current Weather
