@@ -2,13 +2,31 @@ body {
 	background-color: #86608E;
 	display: flex;
 }
-#container {	
-	
+#container {		
 	background-color: grey;
 	max-width: 2000px;
 	margin: auto;
 	justify-content: center;
+	align-items: center;
+	font-family: Calibri;
 }
+#heading {
+	font-size: 25px;
+	text-align: center;
+}
+#search-button {
+	background-color: #8B66FF;
+	border: 2px #8B66FF solid;
+	margin: 10px 10px 10px 10px;
+	color: white;
+}
+#search-button:hover {
+	background-color: #F066FF;
+	border: 2px #8B66FF solid;
+	margin: 10px 10px 10px 10px;
+	
+}
+
 #search-input {
-	margin: 5px 5px 5px 5px;
+	margin: 10px 10px 10px 10px;
 }
