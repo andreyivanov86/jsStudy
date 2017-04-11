@@ -6,6 +6,7 @@ body {
 	background-color: grey;
 	max-width: 2000px;
 	margin: auto;
+	padding: 10px;
 	justify-content: center;
 	align-items: center;
 	font-family: Calibri;
@@ -17,16 +18,22 @@ body {
 #search-button {
 	background-color: #8B66FF;
 	border: 2px #8B66FF solid;
-	margin: 10px 10px 10px 10px;
+	margin: 10px 5px 10px auto;
 	color: white;
 }
 #search-button:hover {
 	background-color: #F066FF;
 	border: 2px #8B66FF solid;
-	margin: 10px 10px 10px 10px;
-	
+	margin: 10px 5px 10px auto;	
 }
-
 #search-input {
+	margin: 10px auto auto 10px;
+}
+#search-string {
+	margin: auto 10px auto 5px;
+}
+#results-container {
+	background-color: #BFBFBF;
 	margin: 10px 10px 10px 10px;
+	padding: 5px 5px 5px 5px;
 }
