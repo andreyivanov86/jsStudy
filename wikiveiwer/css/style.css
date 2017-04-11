@@ -1,0 +1,14 @@
+body {
+	background-color: #86608E;
+	display: flex;
+}
+#container {	
+	
+	background-color: grey;
+	max-width: 2000px;
+	margin: auto;
+	justify-content: center;
+}
+#search-input {
+	margin: 5px 5px 5px 5px;
+}
