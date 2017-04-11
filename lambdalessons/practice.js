@@ -11,7 +11,7 @@ var user = [{
 {},
 {}];
 
-user[0].sayHi();
+ 
 
 // function addProperty(object, newProperty, newValue) {
 // 	object[newProperty] = newValue;
