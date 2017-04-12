@@ -29,7 +29,7 @@ body {
 
 .search-button {
 	background-color: #8B66FF;
-	border: 2px #8B66FF solid;
+	border: 1px #8B66FF solid;
 	color: white;
     margin: 5px auto;
   }
@@ -43,9 +43,6 @@ body {
 	
 }
 
-.search-string {
-	
-}
 .results-container {
 	background-color: #BFBFBF;
 	padding: 10px;
