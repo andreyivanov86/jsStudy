@@ -22,15 +22,30 @@
 // };
 // console.log(nFactorial(3));
 
-function multiplyArguments(arr) {
-	//use the arguments keyword to multiply all of the arguments together and return the product
-	//if no arguments are passed in return 0
-	//if one argument is passed in just return it
-	var total = 1;
-	for (var i = 0; i < arr.length; i++) {
-		total *= arr[i];
-	}
-	return total;
+// function multiplyArguments() {
+// 	//use the arguments keyword to multiply all of the arguments together and return the product
+// 	//if no arguments are passed in return 0
+// 	//if one argument is passed in just return it
+// 	var total = 1;
+// 	for (var i = 0; i < arguments.length; i++) {
+// 		total *= arguments[i];
+// 	}
+// 	return total;
+// }
+// var arr = [1,3,4,6,7,3];
+// console.log(multiplyArguments(arr));
+
+function cacheFunction(cb) {
+	//Extra Credit
+	//use closure to create a cache for the cb function
+	//the function that you return should accept a single argument and invoke cb with that argument
+	//when the function you return is invoked with an argument it should save that argument and its result
+	//when the function you return is called again with an argument that it has seen before it should not call cb
+	//but should instead directly returned the previous result
+	//example:
+	//cb -> function(x) { return x * x; }
+	//if the function you return is invoked with 5 it would pass 5 to cb(5) and return 25
+	//if the function you return is invoked again with 5 it will look on an object in the closure scope
+	//and return 25 directly and will not invoke cb again
+	
 }
-var arr = [1,3,4,6,7,3];
-console.log(multiplyArguments(arr));
