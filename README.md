@@ -24,5 +24,7 @@ August 21
 
 
 Through the last week I had several online meetings with future class mates. It turns out to be very helpful in terms of understanding the introduced concepts. One of the guys is very experienced and open to explain stuff.  
+
 I took on the second checkpoint and had problems with the closure problem and the one related to call site. In the closure I failed to understand the specs. In the other one I completely missed on the .call method. One of the features of .call methods is that it can setup the call site by taking in specific object, to which this will be pointing on execution. It can take any object (array, functino, constructor). 
+
 Hope that I passed the checkpoint. Currently work on HTML and CSS. I have to catch up with the Guessing Game project.
